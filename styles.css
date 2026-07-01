@@ -1425,6 +1425,10 @@ h1 {
   gap: 18px;
 }
 
+.pricing-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .how-grid .premium-card {
   min-height: 300px;
   padding: 26px;
@@ -1519,6 +1523,12 @@ h1 {
   color: var(--premium-dark);
   font-weight: 950;
   box-shadow: 0 18px 44px rgba(14, 16, 33, 0.08);
+}
+
+.upgrade-prompts span {
+  background:
+    linear-gradient(135deg, rgba(109, 91, 255, 0.1), rgba(255, 94, 168, 0.09)),
+    rgba(255, 255, 255, 0.74);
 }
 
 .social-feature-grid,
@@ -1866,6 +1876,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .pricing-four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .price-premium--featured {
     transform: none;
   }
@@ -1969,6 +1983,7 @@ h1 {
   .social-feature-grid,
   .live-grid,
   .card-grid,
+  .pricing-four,
   .faq-premium__grid {
     grid-template-columns: 1fr;
   }
