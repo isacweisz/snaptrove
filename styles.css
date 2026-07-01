@@ -465,6 +465,18 @@ h1 {
   position: relative;
 }
 
+.viral-rail {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.viral-rail article {
+  border-radius: 24px;
+  border-color: rgba(255, 255, 255, 0.84);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.62)),
+    rgba(255, 255, 255, 0.78);
+}
+
 .site-section {
   padding: clamp(60px, 8vw, 104px) 0;
 }
@@ -2660,6 +2672,7 @@ h3 {
 
   .steps-grid,
   .journey-rail,
+  .viral-rail,
   .creation-grid,
   .pricing-grid,
   .trust-grid,
