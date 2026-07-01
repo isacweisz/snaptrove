@@ -1564,7 +1564,7 @@ h3 {
   }
 
   .site-hero h1 {
-    font-size: clamp(3.7rem, 18vw, 5.1rem);
+    font-size: clamp(3.05rem, 15vw, 4.35rem);
   }
 
   .site-hero .brand span:last-child {
