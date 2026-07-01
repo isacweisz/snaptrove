@@ -1,34 +1,44 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="512" height="512" rx="116" fill="#0E1021"/>
-  <rect x="74" y="74" width="364" height="364" rx="92" fill="url(#softGlow)" opacity="0.9"/>
-  <path d="M141 171C141 145.595 161.595 125 187 125H336C361.405 125 382 145.595 382 171V196L141 221V171Z" fill="url(#lid)" />
-  <path d="M147 210L389 184" stroke="#0E1021" stroke-width="22" stroke-linecap="round"/>
-  <rect x="121" y="194" width="270" height="215" rx="49" fill="url(#frame)" />
-  <rect x="151" y="224" width="210" height="155" rx="26" fill="#10122A" fill-opacity="0.92"/>
-  <path d="M178 349L229 286L270 331L304 292L342 349H178Z" fill="url(#mountains)"/>
-  <circle cx="313" cy="267" r="20" fill="#FFB648"/>
-  <path d="M382 110L393 139L422 150L393 161L382 190L371 161L342 150L371 139L382 110Z" fill="#FFF7FB"/>
-  <path d="M111 318L119 338L139 346L119 354L111 374L103 354L83 346L103 338L111 318Z" fill="#FF5EA8"/>
+  <rect x="25" y="25" width="462" height="462" rx="102" fill="url(#tileGlow)" opacity="0.26"/>
+  <g filter="url(#softShadow)">
+    <path d="M151 150C157 132 174 120 193 120H323C345 120 363 136 367 158L372 184H124L151 150Z" fill="url(#lidGradient)"/>
+    <path d="M128 205C128 179.595 148.595 159 174 159H338C363.405 159 384 179.595 384 205V339C384 364.405 363.405 385 338 385H174C148.595 385 128 364.405 128 339V205Z" fill="url(#frameGradient)"/>
+    <path d="M161 228C161 210.327 175.327 196 193 196H319C336.673 196 351 210.327 351 228V322C351 339.673 336.673 354 319 354H193C175.327 354 161 339.673 161 322V228Z" fill="#10122A"/>
+    <path d="M190 329L237 269L275 313L304 280L335 329H190Z" fill="url(#photoGradient)"/>
+    <circle cx="307" cy="251" r="20" fill="#FFB648"/>
+    <path d="M128 199L380 172" stroke="#0E1021" stroke-width="21" stroke-linecap="round"/>
+  </g>
+  <path d="M391 118L402 146L430 157L402 168L391 196L380 168L352 157L380 146L391 118Z" fill="#FFF7FB"/>
   <defs>
-    <radialGradient id="softGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(139 111) rotate(49.0856) scale(421.804)">
-      <stop stop-color="#6D5BFF"/>
-      <stop offset="0.48" stop-color="#FF5EA8"/>
+    <radialGradient id="tileGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(376 113) rotate(132.085) scale(406.741)">
+      <stop stop-color="#FF5EA8"/>
+      <stop offset="0.45" stop-color="#6D5BFF"/>
       <stop offset="1" stop-color="#FFB648"/>
     </radialGradient>
-    <linearGradient id="lid" x1="141" y1="125" x2="382" y2="221" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7D66FF"/>
-      <stop offset="0.5" stop-color="#B94DFF"/>
+    <linearGradient id="lidGradient" x1="133" y1="120" x2="365" y2="197" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D5BFF"/>
+      <stop offset="0.52" stop-color="#C13BFF"/>
       <stop offset="1" stop-color="#FF5EA8"/>
     </linearGradient>
-    <linearGradient id="frame" x1="121" y1="194" x2="391" y2="409" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7D66FF"/>
+    <linearGradient id="frameGradient" x1="128" y1="159" x2="384" y2="385" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D5BFF"/>
       <stop offset="0.52" stop-color="#FF5EA8"/>
       <stop offset="1" stop-color="#FFB648"/>
     </linearGradient>
-    <linearGradient id="mountains" x1="178" y1="286" x2="342" y2="349" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6D5BFF"/>
-      <stop offset="0.5" stop-color="#FF5EA8"/>
+    <linearGradient id="photoGradient" x1="190" y1="269" x2="335" y2="329" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B83BFF"/>
+      <stop offset="0.52" stop-color="#FF5EA8"/>
       <stop offset="1" stop-color="#FFB648"/>
     </linearGradient>
+    <filter id="softShadow" x="78" y="82" width="356" height="363" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.428 0 0 0 0 0.357 0 0 0 0 1 0 0 0 0.38 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
   </defs>
 </svg>
