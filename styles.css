@@ -1521,9 +1521,54 @@ h1 {
   box-shadow: 0 18px 44px rgba(14, 16, 33, 0.08);
 }
 
+.social-feature-grid,
+.live-grid,
+.card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.social-feature-grid,
+.live-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid {
+  grid-template-columns: 1.1fr 0.95fr 0.95fr;
+}
+
+.social-feature-grid .premium-card,
+.live-grid .premium-card,
+.card-grid .premium-card {
+  min-height: 250px;
+  padding: 26px;
+  display: grid;
+  align-content: end;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-feature-grid .premium-card::before,
+.live-grid .premium-card::before,
+.card-grid .premium-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(109, 91, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(255, 94, 168, 0.12), transparent 34%);
+  pointer-events: none;
+}
+
+.social-feature-grid .premium-card > *,
+.live-grid .premium-card > *,
+.card-grid .premium-card > * {
+  position: relative;
+}
+
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(170px, 1fr));
+  grid-template-columns: repeat(4, minmax(170px, 1fr));
   gap: 18px;
 }
 
@@ -1809,7 +1854,10 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .product-grid {
+  .product-grid,
+  .social-feature-grid,
+  .live-grid,
+  .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1918,6 +1966,9 @@ h1 {
 
   .bento-grid,
   .product-grid,
+  .social-feature-grid,
+  .live-grid,
+  .card-grid,
   .faq-premium__grid {
     grid-template-columns: 1fr;
   }
