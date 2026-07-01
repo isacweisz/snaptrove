@@ -1,23 +1,44 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
-  <path d="M139 171C139 142.281 162.281 119 191 119H327C355.719 119 379 142.281 379 171V300C379 328.719 355.719 352 327 352H191C162.281 352 139 328.719 139 300V171Z" fill="#FFF8F3" fill-opacity="0.3"/>
-  <path d="M109 207C109 178.281 132.281 155 161 155H297C325.719 155 349 178.281 349 207V336C349 364.719 325.719 388 297 388H161C132.281 388 109 364.719 109 336V207Z" fill="#FFF8F3" fill-opacity="0.42"/>
-  <path d="M157 201C157 174.49 178.49 153 205 153H351C377.51 153 399 174.49 399 201V338C399 364.51 377.51 386 351 386H205C178.49 386 157 364.51 157 338V201Z" fill="#FFF8F3"/>
-  <path d="M194 322L239 270L274 308L303 275L363 342H211C197.745 342 187 331.255 187 318V315L194 322Z" fill="url(#imageFill)"/>
-  <circle cx="327" cy="217" r="26" fill="#FFD166"/>
-  <path d="M342 76L356 112L392 126L356 140L342 176L328 140L292 126L328 112L342 76Z" fill="#FFF8F3"/>
-  <path d="M217 205H269" stroke="#11101D" stroke-width="22" stroke-linecap="round"/>
-  <path d="M217 247H315" stroke="#11101D" stroke-width="22" stroke-linecap="round"/>
+  <rect width="512" height="512" rx="116" fill="#0E1021"/>
+  <rect x="25" y="25" width="462" height="462" rx="102" fill="url(#tileGlow)" opacity="0.26"/>
+  <g filter="url(#softShadow)">
+    <path d="M151 150C157 132 174 120 193 120H323C345 120 363 136 367 158L372 184H124L151 150Z" fill="url(#lidGradient)"/>
+    <path d="M128 205C128 179.595 148.595 159 174 159H338C363.405 159 384 179.595 384 205V339C384 364.405 363.405 385 338 385H174C148.595 385 128 364.405 128 339V205Z" fill="url(#frameGradient)"/>
+    <path d="M161 228C161 210.327 175.327 196 193 196H319C336.673 196 351 210.327 351 228V322C351 339.673 336.673 354 319 354H193C175.327 354 161 339.673 161 322V228Z" fill="#10122A"/>
+    <path d="M190 329L237 269L275 313L304 280L335 329H190Z" fill="url(#photoGradient)"/>
+    <circle cx="307" cy="251" r="20" fill="#FFB648"/>
+    <path d="M128 199L380 172" stroke="#0E1021" stroke-width="21" stroke-linecap="round"/>
+  </g>
+  <path d="M391 118L402 146L430 157L402 168L391 196L380 168L352 157L380 146L391 118Z" fill="#FFF7FB"/>
   <defs>
-    <linearGradient id="bg" x1="60" y1="56" x2="444" y2="450" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF5F8F"/>
-      <stop offset="0.45" stop-color="#7C8CFF"/>
-      <stop offset="1" stop-color="#35F2C7"/>
+    <radialGradient id="tileGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(376 113) rotate(132.085) scale(406.741)">
+      <stop stop-color="#FF5EA8"/>
+      <stop offset="0.45" stop-color="#6D5BFF"/>
+      <stop offset="1" stop-color="#FFB648"/>
+    </radialGradient>
+    <linearGradient id="lidGradient" x1="133" y1="120" x2="365" y2="197" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D5BFF"/>
+      <stop offset="0.52" stop-color="#C13BFF"/>
+      <stop offset="1" stop-color="#FF5EA8"/>
     </linearGradient>
-    <linearGradient id="imageFill" x1="187" y1="275" x2="363" y2="342" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#35F2C7"/>
-      <stop offset="0.52" stop-color="#7C8CFF"/>
-      <stop offset="1" stop-color="#FF5F8F"/>
+    <linearGradient id="frameGradient" x1="128" y1="159" x2="384" y2="385" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D5BFF"/>
+      <stop offset="0.52" stop-color="#FF5EA8"/>
+      <stop offset="1" stop-color="#FFB648"/>
     </linearGradient>
+    <linearGradient id="photoGradient" x1="190" y1="269" x2="335" y2="329" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B83BFF"/>
+      <stop offset="0.52" stop-color="#FF5EA8"/>
+      <stop offset="1" stop-color="#FFB648"/>
+    </linearGradient>
+    <filter id="softShadow" x="78" y="82" width="356" height="363" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.428 0 0 0 0 0.357 0 0 0 0 1 0 0 0 0.38 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
   </defs>
 </svg>
