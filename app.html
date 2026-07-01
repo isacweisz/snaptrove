@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapTrove App</title>
+    <link rel="icon" href="assets/snaptrove-logo.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero__image" aria-hidden="true"></div>
+        <nav class="topbar" aria-label="Primary">
+          <a class="brand" href="index.html">
+            <img class="brand__mark" src="assets/snaptrove-logo.svg" alt="" />
+            <span>SnapTrove</span>
+          </a>
+          <div class="trip-switcher" aria-label="Current Trove">
+            <span>Wedding Trove</span>
+            <button type="button" aria-label="Open Trove menu">⌄</button>
+          </div>
+          <button class="icon-button" type="button" aria-label="Add photos">+</button>
+        </nav>
+
+        <div class="hero__content">
+          <p class="eyebrow">Private group feed powered by AI</p>
+          <h1>Everyone snaps. AI turns it into something worth sharing.</h1>
+          <p class="hero__copy">
+            Collect photos from every guest, organize the best moments, create a private
+            social feed, then publish posts, albums, cards, books, booklets, and prints.
+          </p>
+          <div class="hero__actions" aria-label="Main actions">
+            <button class="primary-action" type="button">Upload photos</button>
+            <button class="secondary-action" type="button">Create a Trove</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="SnapTrove photo workspace">
+        <aside class="sidebar">
+          <div>
+            <p class="section-label">Trove crew</p>
+            <div class="people">
+              <span title="Maya">M</span>
+              <span title="Dad">D</span>
+              <span title="Sofia">S</span>
+              <span title="Nana">N</span>
+              <button type="button" aria-label="Invite another person">+</button>
+            </div>
+          </div>
+
+          <div class="upload-panel">
+            <p class="section-label">New snaps</p>
+            <strong>248 ready to sort</strong>
+            <span>From 5 phones, 3 cameras, and a shared folder.</span>
+            <button type="button">Run AI tidy-up</button>
+          </div>
+
+          <div class="nav-list" aria-label="Trove filters">
+            <button class="is-active" type="button">Private feed</button>
+            <button type="button">Best moments</button>
+            <button type="button">People</button>
+            <button type="button">Comments</button>
+            <button type="button">Cards & books</button>
+            <button type="button">Print shop</button>
+          </div>
+        </aside>
+
+        <section class="main-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-label">Private social feed</p>
+              <h2>Wedding Trove is live</h2>
+            </div>
+            <div class="segmented-control" aria-label="View mode">
+              <button class="is-selected" type="button">Feed</button>
+              <button type="button">Comments</button>
+              <button type="button">Print</button>
+            </div>
+          </div>
+
+          <div class="story-strip" aria-label="Trove highlights">
+            <button type="button">
+              <span class="story-ring">+</span>
+              Add snap
+            </button>
+            <button type="button">
+              <span class="story-ring ring-coral">AI</span>
+              Best 24
+            </button>
+            <button type="button">
+              <span class="story-ring ring-blue">F</span>
+              Family
+            </button>
+            <button type="button">
+              <span class="story-ring ring-sun">P</span>
+              Party
+            </button>
+            <button type="button">
+              <span class="story-ring ring-mint">Pr</span>
+              Print picks
+            </button>
+          </div>
+
+          <div class="social-feed">
+            <article class="feed-post">
+              <header class="feed-post__header">
+                <div class="avatar">M</div>
+                <div>
+                  <strong>Maya added 42 snaps</strong>
+                  <span>Wedding Trove · family and guests can view</span>
+                </div>
+                <button type="button" aria-label="Post menu">...</button>
+              </header>
+
+              <div class="feed-photo">
+                <img src="assets/travel-hero.jpeg" alt="Phone taking a sunset event photo" />
+                <div class="ai-badge">AI picked for recap</div>
+              </div>
+
+              <div class="reaction-bar" aria-label="Post actions">
+                <button type="button">Like 184</button>
+                <button type="button">Comment 32</button>
+                <button type="button">Share</button>
+                <button type="button">Print</button>
+              </div>
+
+              <div class="caption-block">
+                <p><strong>AI caption:</strong> The moment everyone stopped talking and just watched the sunset.</p>
+                <span>Suggested outputs: Instagram carousel · thank-you card · photo book cover</span>
+              </div>
+
+              <div class="comments">
+                <div>
+                  <strong>Sofia</strong>
+                  <p>This has to be in the printed book.</p>
+                </div>
+                <div>
+                  <strong>Nana</strong>
+                  <p>Please send this one to me when it is ready.</p>
+                </div>
+              </div>
+
+              <form class="comment-composer">
+                <input type="text" value="" placeholder="Add a comment for the group..." aria-label="Add a comment" />
+                <button type="button">Post</button>
+              </form>
+            </article>
+
+            <aside class="feed-ai-panel">
+              <p class="section-label">AI social assistant</p>
+              <div class="ai-action-card">
+                <strong>Keep it brilliant</strong>
+                <p>AI spotted 8 duplicate sunset shots, 3 blinking faces, and 2 kids-only photos.</p>
+              </div>
+              <div class="ai-pill-list">
+                <button type="button">Make 10-photo post</button>
+                <button type="button">Ask people to tag themselves</button>
+                <button type="button">Hide kids from public export</button>
+                <button type="button">Create wedding thank-you card</button>
+              </div>
+              <div class="mini-feed-grid" aria-label="More shared photos">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <aside class="insight-panel">
+          <p class="section-label">AI suggestions</p>
+          <div class="score-card">
+            <span class="score">92%</span>
+            <strong>Trove is share-ready</strong>
+            <p>12 blurry photos removed, 27 duplicates hidden, 9 people tagged.</p>
+          </div>
+          <div class="task-list">
+            <label><input type="checkbox" checked /> Build private family feed</label>
+            <label><input type="checkbox" checked /> Make 10-photo Instagram set</label>
+            <label><input type="checkbox" /> Review new comments</label>
+            <label><input type="checkbox" /> Send top 24 to print</label>
+          </div>
+          <button class="publish-action" type="button">Publish selected</button>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
