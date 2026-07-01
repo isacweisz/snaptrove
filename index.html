@@ -3,224 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SnapTrove - Private Social Platform for Life's Memories</title>
-    <meta
-      name="description"
-      content="SnapTrove is the private social network where every event lives forever. Guests upload, react, comment, and AI turns every event into albums, cards, reels, books and keepsakes."
-    />
-    <link rel="icon" href="snaptrove-logo.svg" />
+    <title>SnapTrove | AI photo hub for every group moment</title>
+    <link rel="icon" href="assets/snaptrove-logo.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="premium-site">
-    <header class="glass-nav" data-nav>
-      <a class="nav-brand" href="index.html" aria-label="SnapTrove home">
-        <img src="snaptrove-logo.svg" alt="" />
-        <span>SnapTrove</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <div class="nav-dropdown">
-          <button type="button">Features</button>
-          <div class="dropdown-panel">
-            <a href="features.html"><strong>Overview</strong><span>Social Troves, AI magic and live event tools.</span></a>
-            <a href="features.html"><strong>Private Feed</strong><span>Likes, comments, stories and reactions.</span></a>
-            <a href="features.html"><strong>AI Magic</strong><span>Find every photo of me, reels and albums.</span></a>
-            <a href="features.html"><strong>Live Events</strong><span>QR uploads, slideshows and chat.</span></a>
+  <body>
+    <main class="site-shell">
+      <section class="site-hero">
+        <div class="site-hero__image" aria-hidden="true"></div>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="brand" href="index.html">
+            <img class="brand__mark" src="assets/snaptrove-logo.svg" alt="" />
+            <span>SnapTrove</span>
+          </a>
+          <div class="site-nav__links">
+            <a href="#how-it-works">How it works</a>
+            <a href="#products">Create</a>
+            <a href="#pricing">Pricing</a>
+            <a href="app.html">Open app</a>
           </div>
-        </div>
-        <div class="nav-dropdown">
-          <button type="button">Solutions</button>
-          <div class="dropdown-panel grid-panel">
-            <a href="solutions/weddings.html">Weddings</a>
-            <a href="solutions/birthdays.html">Birthdays</a>
-            <a href="solutions/schools.html">Schools</a>
-            <a href="solutions/camps.html">Camps</a>
-            <a href="solutions/businesses.html">Businesses</a>
-            <a href="solutions/sports-clubs.html">Sports Clubs</a>
-            <a href="solutions/holidays.html">Holidays</a>
-            <a href="solutions/families.html">Families</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button type="button">Products</button>
-          <div class="dropdown-panel grid-panel">
-            <a href="products/greeting-cards.html">Greeting Cards</a>
-            <a href="products/thank-you-cards.html">Thank You Cards</a>
-            <a href="products/photo-books.html">Photo Books</a>
-            <a href="products/prints.html">Prints</a>
-            <a href="products/canvas.html">Canvas</a>
-            <a href="products/calendars.html">Calendars</a>
-            <a href="products/memory-boxes.html">Memory Boxes</a>
-            <a href="products/ai-reels.html">AI Reels</a>
-            <a href="products/keepsakes.html">Keepsakes</a>
-          </div>
-        </div>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="nav-link" href="contact.html">Contact</a>
-        <a class="nav-cta-solid" href="app.html">Create Your First Trove</a>
-        <button class="mobile-menu-button" type="button" data-menu-open aria-label="Open menu">
-          <span></span><span></span>
-        </button>
-      </div>
-    </header>
+          <a class="nav-cta" href="app.html">Try demo</a>
+        </nav>
 
-    <aside class="mobile-drawer" data-menu aria-hidden="true">
-      <button class="mobile-close" type="button" data-menu-close aria-label="Close menu">Close</button>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="products.html">Products</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="support.html">Support</a>
-      <a href="contact.html">Contact</a>
-      <a class="drawer-cta" href="app.html">Create Your First Trove</a>
-    </aside>
-    <div class="drawer-scrim" data-menu-close></div>
-
-    <main>
-      <section class="new-hero">
-        <div class="animated-gradient" aria-hidden="true"></div>
-        <div class="site-container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">The private social network where every event lives forever.</p>
-            <h1>Every photo. Every guest. One beautiful story.</h1>
-            <p class="hero-lede">
-              The private social platform for life's memories - where guests upload,
-              react, comment, and AI turns every event into albums, cards, reels,
-              books and keepsakes.
-            </p>
-            <div class="button-row">
-              <a class="button-primary" href="app.html">Create Your First Trove</a>
-              <a class="button-secondary" href="app.html">Watch Demo</a>
-            </div>
+        <div class="site-hero__content">
+          <p class="eyebrow">getsnaptrove.com</p>
+          <h1>SnapTrove</h1>
+          <p class="site-hero__tagline">The AI photo hub for every group moment.</p>
+          <p class="site-hero__copy">
+            A private Instagram for weddings, birthdays, trips, teams, schools, and
+            businesses. Everyone uploads their photos, AI organizes the best moments,
+            then SnapTrove turns them into feeds, posts, albums, cards, books, booklets,
+            and prints.
+          </p>
+          <div class="hero__actions" aria-label="Main actions">
+            <a class="primary-action link-action" href="app.html">Launch app demo</a>
+            <a class="secondary-action link-action" href="#products">What it creates</a>
           </div>
-          <div class="phone-stage reveal" aria-label="SnapTrove app mockup">
-            <div class="phone-orbit orbit-a">483 photos of you</div>
-            <div class="phone-orbit orbit-b">Greeting card ready</div>
-            <div class="mock-phone">
-              <div class="phone-top"><span></span><strong>Wedding Trove</strong><em>Live</em></div>
-              <div class="story-dots"><span></span><span></span><span></span><span></span></div>
-              <div class="mock-photo">
-                <strong>Private Trove feed</strong>
-                <span>184 likes · 32 comments</span>
-              </div>
-              <div class="mock-card">
-                <strong>AI found every photo of Maya</strong>
-                <p>Save favourites, create a reel, or turn them into a book.</p>
-              </div>
-              <div class="mock-actions">
-                <span>Card</span><span>Book</span><span>Print</span>
-              </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Product highlights">
+        <div>
+          <strong>1</strong>
+          <span>private feed for the whole group</span>
+        </div>
+        <div>
+          <strong>AI</strong>
+          <span>sorts faces, moments, duplicates, and quality</span>
+        </div>
+        <div>
+          <strong>10</strong>
+          <span>social posts and carousels ready to share</span>
+        </div>
+        <div>
+          <strong>∞</strong>
+          <span>cards, books, prints, posters, and booklets</span>
+        </div>
+      </section>
+
+      <section class="site-section product-preview" id="how-it-works">
+        <div class="section-intro">
+          <p class="section-label">How it works</p>
+          <h2>Everyone adds photos. SnapTrove turns the chaos into a living memory feed.</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article>
+            <span>1</span>
+            <h3>Create a Trove</h3>
+            <p>Start a private space for a wedding, birthday, trip, class, sports team, or business event.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Invite everyone</h3>
+            <p>Guests upload from their phones so the best photos are not trapped in separate camera rolls.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Let AI build</h3>
+            <p>SnapTrove finds the best moments, cleans duplicates, tags people, and suggests what to share or print.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="site-section split-section">
+        <div>
+          <p class="section-label">Private social feed</p>
+          <h2>Like Instagram for your group, without losing control of the memories.</h2>
+          <p>
+            Each Trove has a clean shared feed, highlights, comments, reactions, people
+            filters, and AI-made collections. Keep kids’ photos private, share client
+            galleries with the right people, or publish only the best moments publicly.
+          </p>
+          <a class="secondary-action link-action" href="app.html">View the app</a>
+        </div>
+        <div class="mock-window" aria-label="SnapTrove app preview">
+          <div class="mock-window__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mock-window__content">
+            <div class="mock-photo"></div>
+            <div class="mock-copy">
+              <strong>Wedding Trove</strong>
+              <span>92% share-ready</span>
+              <p>AI found the ceremony highlights, family portraits, party moments, and print-ready favorites.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="page-section">
-        <div class="site-container section-heading reveal">
-          <p class="eyebrow">Platform overview</p>
-          <h2>A private memory platform built around real events.</h2>
-          <p>The homepage gives the shape of SnapTrove. The deeper product, solution and pricing details now live on their own pages.</p>
+      <section class="site-section" id="products">
+        <div class="section-intro">
+          <p class="section-label">Create from photos</p>
+          <h2>From shared snaps to social posts, cards, books, and business materials.</h2>
         </div>
-        <div class="site-container three-grid">
-          <article class="premium-tile reveal"><span>01</span><h3>Private social Troves</h3><p>Guests upload, like, comment and react inside one invite-only event space.</p><a class="text-link" href="features.html">View features</a></article>
-          <article class="premium-tile reveal"><span>02</span><h3>AI memory engine</h3><p>Face search, duplicate removal, AI albums, captions, reels and timelines.</p><a class="text-link" href="features.html">Explore AI</a></article>
-          <article class="premium-tile reveal"><span>03</span><h3>Keepsake commerce</h3><p>Turn private moments into cards, books, calendars, prints and gifts.</p><a class="text-link" href="products.html">See products</a></article>
+
+        <div class="creation-grid">
+          <article>
+            <h3>Social posts</h3>
+            <p>Instagram carousels, captions, story sets, event recaps, and highlight reels.</p>
+          </article>
+          <article>
+            <h3>Personal prints</h3>
+            <p>Wedding thank-you cards, birthday cards, family books, posters, and framed prints.</p>
+          </article>
+          <article>
+            <h3>Business output</h3>
+            <p>Event booklets, school yearbooks, team brochures, client galleries, and branded recap packs.</p>
+          </article>
+          <article>
+            <h3>Smart privacy</h3>
+            <p>AI helps choose which photos are public, private, family-only, client-only, or print-only.</p>
+          </article>
         </div>
       </section>
 
-      <section class="page-section soft-band">
-        <div class="site-container split-section">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Explore the site</p>
-            <h2>Separate pages for every major part of the product.</h2>
-            <p>SnapTrove now has a proper company-style architecture: product features, event solutions, physical products, pricing, company pages and support.</p>
-          </div>
-          <div class="route-grid reveal">
-            <a href="features.html"><strong>Features</strong><span>Social, AI and live event tools</span></a>
-            <a href="solutions.html"><strong>Solutions</strong><span>Weddings, schools, camps and more</span></a>
-            <a href="products.html"><strong>Products</strong><span>Cards, books, prints and keepsakes</span></a>
-            <a href="pricing.html"><strong>Pricing</strong><span>Free guests, Event Pass and Business</span></a>
-          </div>
+      <section class="site-section pricing-section" id="pricing">
+        <div class="section-intro">
+          <p class="section-label">Monetization</p>
+          <h2>Simple pricing for families, events, and businesses.</h2>
         </div>
-      </section>
 
-      <section class="page-section">
-        <div class="site-container split-section reverse">
-          <div class="feed-preview reveal">
-            <div class="feed-card">
-              <div><strong>Maya added 42 snaps</strong><span>Wedding Trove · private</span></div>
-              <div class="feed-image"></div>
-              <p>184 likes · 32 comments · AI card ready</p>
-            </div>
-            <div class="comment-pill">"This belongs in the photo book."</div>
-          </div>
-          <div class="section-heading reveal">
-            <p class="eyebrow">The feeling</p>
-            <h2>Not storage. A private social layer for the people who were there.</h2>
-            <p>The homepage stays emotional and simple. Detailed feature proof now lives on the Features page, while each event type and keepsake has its own route.</p>
-            <div class="button-row">
-              <a class="button-secondary" href="features.html">Explore Features</a>
-              <a class="button-secondary" href="solutions.html">Browse Solutions</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section trust-section">
-        <div class="site-container trust-panel-new reveal">
-          <div>
-            <p class="eyebrow">Trust layer</p>
-            <h2>Private by default. Built for families, schools and real communities.</h2>
-            <p>No public endless feed, no ads and no selling data. SnapTrove keeps the social experience around the actual event.</p>
-          </div>
-          <div class="trust-badges">
-            <span>Invite-only Troves</span><span>GDPR-ready direction</span><span>Owner controls</span><span>Guests join free</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="final-band">
-        <div class="site-container final-panel reveal">
-          <p class="eyebrow">Create your first Trove</p>
-          <h2>Do not let the best memories disappear.</h2>
-          <p>Give every event a private social home where the photos, people, reactions and keepsakes live forever.</p>
-          <div class="button-row">
-            <a class="button-primary" href="app.html">Create Your First Trove</a>
-            <a class="button-secondary" href="contact.html">Talk to us</a>
-          </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span>Free</span>
+            <h3>Starter</h3>
+            <strong>$0</strong>
+            <p>One small Trove, basic private feed, limited uploads, and simple sharing.</p>
+          </article>
+          <article class="price-card is-featured">
+            <span>Best fit</span>
+            <h3>Event Pass</h3>
+            <strong>$14.99</strong>
+            <p>One event, unlimited guests, AI sorting, social exports, galleries, and print ordering.</p>
+          </article>
+          <article class="price-card">
+            <span>Teams</span>
+            <h3>Pro Troves</h3>
+            <strong>$19/mo</strong>
+            <p>Multiple Troves, branded galleries, business booklets, bigger storage, and priority exports.</p>
+          </article>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="site-container footer-grid">
-        <a class="nav-brand" href="index.html"><img src="snaptrove-logo.svg" alt="" /><span>SnapTrove</span></a>
-        <div>
-          <strong>Company</strong>
-          <a href="about.html">About</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div>
-          <strong>Product</strong>
-          <a href="features.html">Features</a>
-          <a href="products.html">Products</a>
-          <a href="pricing.html">Pricing</a>
-        </div>
-        <div>
-          <strong>Help</strong>
-          <a href="support.html">Support</a>
-          <a href="mailto:hello@getsnaptrove.com">hello@getsnaptrove.com</a>
-        </div>
-      </div>
-    </footer>
-    <script src="site.js"></script>
   </body>
 </html>
