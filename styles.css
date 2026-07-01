@@ -1871,6 +1871,53 @@
   font-weight: 720;
 }
 
+.footer-grid--premium {
+  grid-template-columns: 1.5fr repeat(5, minmax(0, 1fr));
+  align-items: start;
+}
+
+.footer-brand-block p {
+  max-width: 260px;
+  margin: 12px 0 0;
+  color: var(--site-muted);
+  line-height: 1.55;
+}
+
+.footer-grid strong {
+  color: var(--site-ink);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-grid a:hover {
+  color: var(--site-purple);
+}
+
+.video-guide-card {
+  position: relative;
+}
+
+.video-guide-card::after {
+  content: "Coming soon";
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(109, 91, 255, 0.1);
+  color: var(--site-purple);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.mosaic-card.celebrations {
+  background:
+    radial-gradient(circle at 76% 18%, rgba(255, 182, 72, 0.3), transparent 32%),
+    linear-gradient(135deg, rgba(109, 91, 255, 0.16), rgba(255, 94, 168, 0.14)),
+    #fff;
+}
+
 .narrow {
   max-width: 880px;
 }
