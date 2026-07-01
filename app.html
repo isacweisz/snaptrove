@@ -3,206 +3,344 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SnapTrove App</title>
+    <title>SnapTrove App MVP</title>
     <link rel="icon" href="snaptrove-logo.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <main class="app-shell">
-      <section class="hero">
-        <div class="hero__image" aria-hidden="true"></div>
-        <nav class="topbar" aria-label="Primary">
-          <a class="brand" href="index.html">
-            <img class="brand__mark" src="snaptrove-logo.svg" alt="" />
-            <span>SnapTrove</span>
-          </a>
-          <div class="trip-switcher" aria-label="Current Trove">
-            <span>Wedding Trove</span>
-            <button type="button" aria-label="Open Trove menu">⌄</button>
-          </div>
-          <button class="icon-button" type="button" aria-label="Add another memory">+</button>
-        </nav>
-
-        <div class="hero__content">
-          <p class="eyebrow">The private social platform for life's memories</p>
-          <h1>This is where the memory lives.</h1>
-          <p class="hero__copy">
-            Not storage. A private social Trove for the people who were actually
-            there, with AI discovery, Stories, chat, reactions, live uploads and
-            keepsakes that make the event keep living.
-          </p>
-          <div class="hero__actions" aria-label="Main actions">
-            <button class="primary-action" type="button">Find photos of me</button>
-            <button class="secondary-action" type="button">Create your own Trove</button>
-          </div>
+  <body class="mvp-app-page">
+    <main class="mvp-stage" data-mobile-app>
+      <section class="mvp-brief" aria-label="SnapTrove mobile app MVP">
+        <a class="mvp-wordmark" href="index.html">
+          <img src="snaptrove-logo.svg" alt="" />
+          <span>SnapTrove</span>
+        </a>
+        <h1>The product starts here.</h1>
+        <p>
+          A polished mobile-first MVP where someone can create a Trove, invite
+          their people, upload memories, and share the little reactions that make
+          a private album feel alive.
+        </p>
+        <div class="mvp-flow-pills" aria-label="MVP flow">
+          <span>Create</span>
+          <span>Invite</span>
+          <span>Upload</span>
+          <span>React</span>
         </div>
       </section>
 
-      <section class="workspace" aria-label="SnapTrove photo workspace">
-        <aside class="sidebar">
-          <div>
-            <p class="section-label">Trove crew</p>
-            <div class="people">
-              <span title="Maya">M</span>
-              <span title="Dad">D</span>
-              <span title="Sofia">S</span>
-              <span title="Nana">N</span>
-              <button type="button" aria-label="Invite another person">+</button>
+      <section class="phone-shell" aria-label="SnapTrove app prototype">
+        <div class="phone-device">
+          <div class="phone-status" aria-hidden="true">
+            <span>9:41</span>
+            <span>5G 100%</span>
+          </div>
+
+          <div class="app-screen app-screen--splash is-active" data-screen="splash">
+            <img src="snaptrove-logo.svg" alt="" />
+            <h2>SnapTrove</h2>
+            <p>Private memories, gathered beautifully.</p>
+            <button class="mvp-button" type="button" data-go="welcome">Begin</button>
+          </div>
+
+          <div class="app-screen" data-screen="welcome">
+            <div class="welcome-photo" aria-hidden="true"></div>
+            <div class="screen-copy">
+              <p class="soft-label">For the people who were there</p>
+              <h2>One private place for every angle of the day.</h2>
+              <p>Create a Trove in a few taps. Guests can add photos without fuss.</p>
+            </div>
+            <div class="action-stack">
+              <button class="mvp-button" type="button" data-go="signup">Create my account</button>
+              <button class="mvp-button mvp-button--ghost" type="button" data-go="login">I already have one</button>
             </div>
           </div>
 
-          <div class="upload-panel">
-            <p class="section-label">New snaps</p>
-            <strong>248 new memories added</strong>
-            <span>From QR uploads, guest chat, phones, cameras and shared folders. Zero friction for guests.</span>
-            <button type="button">Organise memories</button>
-          </div>
-
-          <div class="nav-list" aria-label="Trove filters">
-            <button class="is-active" type="button">Private feed</button>
-            <button type="button">Most liked</button>
-            <button type="button">Photos of me</button>
-            <button type="button">Stories</button>
-            <button type="button">Best moments</button>
-            <button type="button">People</button>
-            <button type="button">Comments</button>
-            <button type="button">Chat & polls</button>
-            <button type="button">AI cards</button>
-            <button type="button">Downloads</button>
-            <button type="button">Print shop</button>
-          </div>
-        </aside>
-
-        <section class="main-panel">
-          <div class="panel-header">
-            <div>
-              <p class="section-label">Private memory community</p>
-              <h2>Wedding Trove is still alive</h2>
+          <div class="app-screen" data-screen="signup">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="welcome" aria-label="Back">‹</button>
+              <span>Create account</span>
+            </header>
+            <div class="screen-copy">
+              <h2>Save the moments around your people.</h2>
+              <p>No public profile. No follower chasing. Just your private Troves.</p>
             </div>
-            <div class="segmented-control" aria-label="View mode">
-              <button class="is-selected" type="button">Feed</button>
-              <button type="button">Stories</button>
-              <button type="button">Comments</button>
-              <button type="button">Polls</button>
+            <form class="mvp-form">
+              <label>Name <input type="text" value="Maya Chen" /></label>
+              <label>Email <input type="email" value="maya@example.com" /></label>
+              <label>Password <input type="password" value="memories" /></label>
+              <button class="mvp-button" type="button" data-go="home">Continue</button>
+            </form>
+          </div>
+
+          <div class="app-screen" data-screen="login">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="welcome" aria-label="Back">‹</button>
+              <span>Welcome back</span>
+            </header>
+            <div class="screen-copy">
+              <h2>Your Troves are waiting.</h2>
+              <p>Pick up where your people left a memory.</p>
+            </div>
+            <form class="mvp-form">
+              <label>Email <input type="email" value="maya@example.com" /></label>
+              <label>Password <input type="password" value="memories" /></label>
+              <button class="mvp-button" type="button" data-go="home">Log in</button>
+            </form>
+          </div>
+
+          <div class="app-screen" data-screen="home">
+            <header class="home-top">
+              <div>
+                <p class="soft-label">Good morning, Maya</p>
+                <h2>Your Troves</h2>
+              </div>
+              <button class="avatar-button" type="button" data-go="profile" aria-label="Profile">M</button>
+            </header>
+            <button class="create-card" type="button" data-go="create">
+              <span>+</span>
+              <strong>Start a new Trove</strong>
+              <small>Gather photos from a birthday, trip, wedding, or tiny lovely day.</small>
+            </button>
+            <section class="trove-card" data-go="trove" role="button" tabindex="0">
+              <div class="trove-cover" aria-hidden="true"></div>
+              <div class="trove-card__body">
+                <p class="soft-label">Private Trove</p>
+                <h3>Ella's 30th</h3>
+                <p>42 members · 286 memories · buzzing today</p>
+              </div>
+            </section>
+            <section class="empty-state">
+              <strong>Recent warmth</strong>
+              <p>Sofia loved your dance-floor photo. Nana left a comment.</p>
+            </section>
+            <nav class="bottom-nav" aria-label="Main">
+              <button class="is-selected" type="button" data-go="home">Home</button>
+              <button type="button" data-go="feed">Feed</button>
+              <button type="button" data-go="notifications">Updates</button>
+              <button type="button" data-go="profile">You</button>
+            </nav>
+          </div>
+
+          <div class="app-screen" data-screen="create">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="home" aria-label="Back">‹</button>
+              <span>New Trove</span>
+            </header>
+            <div class="screen-copy">
+              <h2>What are we remembering?</h2>
+              <p>A name, a date, and a cover is enough. You can polish it later.</p>
+            </div>
+            <form class="mvp-form">
+              <label>Trove name <input type="text" value="Ella's 30th" /></label>
+              <label>Date <input type="text" value="Saturday, 18 July" /></label>
+              <label>Who can join <select><option>Only people with my invite</option></select></label>
+              <button class="mvp-button" type="button" data-go="invite" data-toast="Trove created">Create Trove</button>
+            </form>
+          </div>
+
+          <div class="app-screen" data-screen="trove">
+            <header class="trove-hero">
+              <button class="icon-chip" type="button" data-go="home" aria-label="Back">‹</button>
+              <button class="icon-chip" type="button" data-go="settings" aria-label="Trove settings">•••</button>
+            </header>
+            <div class="trove-cover-large" aria-hidden="true"></div>
+            <div class="trove-title">
+              <p class="soft-label">Private Trove</p>
+              <h2>Ella's 30th</h2>
+              <p>42 people are adding their favorite parts of the night.</p>
+            </div>
+            <div class="quick-actions">
+              <button type="button" data-go="invite">Invite</button>
+              <button type="button" data-open="upload">Upload</button>
+              <button type="button" data-go="members">People</button>
+            </div>
+            <div class="mini-stats">
+              <span><strong>286</strong> memories</span>
+              <span><strong>913</strong> reactions</span>
+              <span><strong>68</strong> comments</span>
+            </div>
+            <button class="mvp-button" type="button" data-go="feed">Open private feed</button>
+          </div>
+
+          <div class="app-screen" data-screen="invite">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="trove" aria-label="Back">‹</button>
+              <span>Invite guests</span>
+            </header>
+            <div class="qr-card">
+              <div class="qr-code" aria-label="Invite QR code">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <h2>Let guests add memories instantly.</h2>
+              <p>Scan the code or share the private link. They can upload without creating a full account.</p>
+            </div>
+            <div class="action-stack">
+              <button class="mvp-button" type="button" data-toast="Invite link copied">Copy private link</button>
+              <button class="mvp-button mvp-button--ghost" type="button" data-toast="QR ready to share">Share QR code</button>
             </div>
           </div>
 
-          <div class="story-strip" aria-label="Trove highlights">
-            <button type="button">
-              <span class="story-ring">+</span>
-              Add memory
-            </button>
-            <button type="button">
-              <span class="story-ring ring-coral">❤</span>
-              Most liked
-            </button>
-            <button type="button">
-              <span class="story-ring ring-blue">F</span>
-              483 of me
-            </button>
-            <button type="button">
-              <span class="story-ring ring-sun">P</span>
-              Story
-            </button>
-            <button type="button">
-              <span class="story-ring ring-mint">Pr</span>
-              AI cards
-            </button>
-          </div>
-
-          <div class="social-feed">
-            <article class="feed-post">
-              <header class="feed-post__header">
-                <div class="avatar">M</div>
-                <div>
-                  <strong>Maya added 42 snaps and 3 voice notes</strong>
-                  <span>Wedding Trove · private to family and guests</span>
-                </div>
-                <button type="button" aria-label="Post menu">...</button>
+          <div class="app-screen" data-screen="feed">
+            <header class="feed-top">
+              <button class="icon-chip" type="button" data-go="trove" aria-label="Back">‹</button>
+              <div>
+                <p class="soft-label">Ella's 30th</p>
+                <h2>Private feed</h2>
+              </div>
+              <button class="icon-chip" type="button" data-open="upload" aria-label="Upload">+</button>
+            </header>
+            <section class="story-row" aria-label="Members">
+              <button type="button" data-open="upload"><span>+</span>Add</button>
+              <button type="button"><span>M</span>Maya</button>
+              <button type="button"><span>S</span>Sofia</button>
+              <button type="button"><span>N</span>Nana</button>
+            </section>
+            <article class="post-card">
+              <header>
+                <span class="avatar-dot">S</span>
+                <div><strong>Sofia added 18 memories</strong><small>12 minutes ago</small></div>
               </header>
-
-              <div class="feed-photo">
-                <img src="travel-hero.jpeg" alt="Phone taking a sunset event photo" />
-                <div class="ai-badge">We found 483 photos of you</div>
+              <button class="post-photo" type="button" data-open="viewer" aria-label="Open photo"></button>
+              <div class="reaction-row">
+                <button type="button" data-toast="You loved this">Love 184</button>
+                <button type="button" data-open="reactions">React</button>
+                <button type="button" data-open="comments">Comment 32</button>
               </div>
-
-              <div class="reaction-bar" aria-label="Post actions">
-                <button type="button">❤️ 184</button>
-                <button type="button">😂 😍 🔥</button>
-                <button type="button">Comment 32</button>
-                <button type="button">Share reel</button>
-              </div>
-
-              <div class="caption-block">
-                <p><strong>AI caption:</strong> The moment everyone stopped talking and just watched the sunset.</p>
-                <span>Private social layer: Stories · replies · mentions · polls · Made with SnapTrove reel · Memory Profile badges</span>
-              </div>
-
-              <div class="comments">
-                <div>
-                  <strong>Sofia</strong>
-                  <p>This has to be in the printed book. Also pin it! @Maya</p>
-                </div>
-                <div>
-                  <strong>Nana</strong>
-                  <p>Please make this into a thank-you card.</p>
-                </div>
-              </div>
-
-              <form class="comment-composer">
-                <input type="text" value="" placeholder="Reply, react, mention someone, or vote in a poll..." aria-label="Add a comment" />
-                <button type="button">Post</button>
-              </form>
+              <p><strong>Maya</strong> This is the exact second everyone started singing.</p>
             </article>
+            <nav class="bottom-nav" aria-label="Main">
+              <button type="button" data-go="home">Home</button>
+              <button class="is-selected" type="button" data-go="feed">Feed</button>
+              <button type="button" data-go="notifications">Updates</button>
+              <button type="button" data-go="profile">You</button>
+            </nav>
+          </div>
 
-            <aside class="feed-ai-panel">
-              <p class="section-label">AI social assistant</p>
-              <div class="ai-action-card">
-                <strong>AI Photo Challenges</strong>
-                <p>Take a photo with Grandma. Capture the cake. Find someone wearing blue. Best dance move.</p>
-              </div>
-              <div class="ai-pill-list">
-                <button type="button">Find every photo of me</button>
-                <button type="button">Post Story</button>
-                <button type="button">Start event poll</button>
-                <button type="button">Open Memory Profile</button>
-                <button type="button">Award Top Photographer</button>
-                <button type="button">Play live slideshow</button>
-                <button type="button">View guest leaderboard</button>
-                <button type="button">Make highlight reel</button>
-                <button type="button">Save full album</button>
-                <button type="button">Make birthday card</button>
-                <button type="button">Create Memory Wrapped</button>
-                <button type="button">Turn into framed print</button>
-                <button type="button">Ask people to tag themselves</button>
-                <button type="button">Hide kids from public export</button>
-                <button type="button">Order printed thank-you cards</button>
-              </div>
-              <div class="mini-feed-grid" aria-label="More shared photos">
-                <span></span><span></span><span></span><span></span>
-              </div>
-            </aside>
+          <div class="app-screen" data-screen="members">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="trove" aria-label="Back">‹</button>
+              <span>People</span>
+            </header>
+            <div class="member-list">
+              <div><span>M</span><strong>Maya</strong><small>Owner</small></div>
+              <div><span>S</span><strong>Sofia</strong><small>286 uploads</small></div>
+              <div><span>N</span><strong>Nana</strong><small>Top commenter</small></div>
+              <div><span>J</span><strong>Jon</strong><small>Joined by link</small></div>
+            </div>
+            <button class="mvp-button" type="button" data-go="invite">Invite more people</button>
           </div>
-        </section>
 
-        <aside class="insight-panel">
-            <p class="section-label">Live Trove</p>
-          <div class="score-card">
-            <span class="score">92%</span>
-            <strong>Trove is still buzzing</strong>
-            <p>Private feed, Stories, polls, badges and reactions are active inside this Trove only. Follow memories, not strangers.</p>
+          <div class="app-screen" data-screen="settings">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="trove" aria-label="Back">‹</button>
+              <span>Trove settings</span>
+            </header>
+            <div class="settings-list">
+              <label><span>Guests can upload</span><input type="checkbox" checked /></label>
+              <label><span>Comments are on</span><input type="checkbox" checked /></label>
+              <label><span>Approve new members</span><input type="checkbox" /></label>
+              <label><span>Keep invite link active</span><input type="checkbox" checked /></label>
+            </div>
+            <button class="mvp-button mvp-button--danger" type="button">Archive Trove</button>
           </div>
-          <div class="task-list">
-            <label><input type="checkbox" checked /> Moments over storage</label>
-            <label><input type="checkbox" checked /> Private by default</label>
-            <label><input type="checkbox" checked /> No public endless feed</label>
-            <label><input type="checkbox" checked /> Emoji reactions and replies live</label>
-            <label><input type="checkbox" /> Save best Stories into highlights</label>
-            <label><input type="checkbox" /> Add badges to Memory Profiles</label>
+
+          <div class="app-screen" data-screen="profile">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="home" aria-label="Back">‹</button>
+              <span>Profile</span>
+            </header>
+            <div class="profile-card">
+              <span>M</span>
+              <h2>Maya Chen</h2>
+              <p>4 Troves · 812 memories saved</p>
+            </div>
+            <div class="settings-list">
+              <button type="button" data-go="privacy">Privacy and sharing</button>
+              <button type="button" data-go="notifications">Notifications</button>
+              <button type="button" data-go="login">Log out</button>
+            </div>
           </div>
-          <button class="publish-action" type="button">Unlock keepsakes</button>
-        </aside>
+
+          <div class="app-screen" data-screen="notifications">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="home" aria-label="Back">‹</button>
+              <span>Updates</span>
+            </header>
+            <div class="update-list">
+              <div><strong>Nana commented</strong><p>"This belongs in the family favorites."</p></div>
+              <div><strong>Jon joined Ella's 30th</strong><p>He added 9 photos from the cake table.</p></div>
+              <div><strong>Sofia loved your upload</strong><p>The dance floor photo is getting all the warmth.</p></div>
+            </div>
+          </div>
+
+          <div class="app-screen" data-screen="privacy">
+            <header class="screen-top">
+              <button class="icon-chip" type="button" data-go="profile" aria-label="Back">‹</button>
+              <span>Privacy</span>
+            </header>
+            <div class="screen-copy">
+              <h2>Private by default.</h2>
+              <p>Your Troves are visible only to invited people. You choose who can join, upload, and comment.</p>
+            </div>
+            <div class="settings-list">
+              <label><span>Hide my profile from guests</span><input type="checkbox" /></label>
+              <label><span>Ask before photo downloads</span><input type="checkbox" checked /></label>
+              <label><span>Email me warm updates</span><input type="checkbox" checked /></label>
+            </div>
+          </div>
+
+          <div class="app-toast" data-toast-live aria-live="polite"></div>
+
+          <div class="mvp-modal" data-modal="upload" aria-hidden="true">
+            <div class="mvp-sheet">
+              <button class="sheet-close" type="button" data-close-modal aria-label="Close">×</button>
+              <h2>Add memories</h2>
+              <p>Drop in photos or videos from the day. Guests see them once they finish uploading.</p>
+              <div class="upload-drop"><span>+</span><strong>Choose photos or videos</strong><small>Photos, clips, Live Photos</small></div>
+              <button class="mvp-button" type="button" data-close-modal data-toast="Memories uploaded">Upload to Trove</button>
+            </div>
+          </div>
+
+          <div class="mvp-modal" data-modal="viewer" aria-hidden="true">
+            <div class="viewer-sheet">
+              <button class="sheet-close" type="button" data-close-modal aria-label="Close">×</button>
+              <div class="viewer-photo" aria-label="Shared memory"></div>
+              <div class="reaction-row">
+                <button type="button" data-toast="Saved to favorites">Love</button>
+                <button type="button" data-open="comments">Comment</button>
+                <button type="button" data-open="reactions">React</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mvp-modal" data-modal="reactions" aria-hidden="true">
+            <div class="mvp-sheet mvp-sheet--small">
+              <button class="sheet-close" type="button" data-close-modal aria-label="Close">×</button>
+              <h2>Send a little warmth</h2>
+              <div class="reaction-picker">
+                <button type="button" data-close-modal data-toast="Reaction sent">Love</button>
+                <button type="button" data-close-modal data-toast="Reaction sent">Joy</button>
+                <button type="button" data-close-modal data-toast="Reaction sent">Wow</button>
+                <button type="button" data-close-modal data-toast="Reaction sent">Tears</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mvp-modal" data-modal="comments" aria-hidden="true">
+            <div class="mvp-sheet">
+              <button class="sheet-close" type="button" data-close-modal aria-label="Close">×</button>
+              <h2>Comments</h2>
+              <div class="comment-card"><strong>Sofia</strong><p>I can hear this photo.</p></div>
+              <div class="comment-card"><strong>Nana</strong><p>Please keep this one near the top.</p></div>
+              <form class="comment-box">
+                <input type="text" placeholder="Add something kind..." />
+                <button type="button" data-close-modal data-toast="Comment added">Post</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="site.js"></script>
   </body>
 </html>

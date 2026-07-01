@@ -61,3 +61,66 @@ document.querySelectorAll("[data-feature-search]").forEach((demo) => {
     });
   });
 });
+
+document.querySelectorAll("[data-mobile-app]").forEach((app) => {
+  const screens = app.querySelectorAll("[data-screen]");
+  const modals = app.querySelectorAll("[data-modal]");
+  const toast = app.querySelector("[data-toast-live]");
+  let toastTimer;
+
+  const showToast = (message) => {
+    if (!toast || !message) return;
+    window.clearTimeout(toastTimer);
+    toast.textContent = message;
+    toast.classList.add("is-visible");
+    toastTimer = window.setTimeout(() => {
+      toast.classList.remove("is-visible");
+    }, 1800);
+  };
+
+  const showScreen = (name) => {
+    screens.forEach((screen) => {
+      screen.classList.toggle("is-active", screen.dataset.screen === name);
+      if (screen.dataset.screen === name) screen.scrollTop = 0;
+    });
+  };
+
+  const closeModals = () => {
+    modals.forEach((modal) => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+    });
+  };
+
+  app.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-go], [data-open], [data-close-modal], [data-toast]");
+    if (!trigger || !app.contains(trigger)) return;
+
+    if (trigger.dataset.go) {
+      closeModals();
+      showScreen(trigger.dataset.go);
+    }
+
+    if (trigger.dataset.open) {
+      closeModals();
+      const modal = app.querySelector(`[data-modal="${trigger.dataset.open}"]`);
+      modal?.classList.add("is-open");
+      modal?.setAttribute("aria-hidden", "false");
+    }
+
+    if (trigger.hasAttribute("data-close-modal")) {
+      closeModals();
+    }
+
+    showToast(trigger.dataset.toast);
+  });
+
+  app.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeModals();
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const card = event.target.closest("[data-go][role='button']");
+    if (!card) return;
+    event.preventDefault();
+    showScreen(card.dataset.go);
+  });
+});
