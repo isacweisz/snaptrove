@@ -1,295 +1,103 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SnapTrove - Private Social Platform for Life's Memories</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SnapTrove — Every Moment. One Story.</title>
     <meta
       name="description"
-      content="SnapTrove is the private social network where every event lives forever. Guests upload, react, comment, and AI turns every event into albums, cards, reels, books and keepsakes."
-    />
-    <link rel="icon" href="snaptrove-logo.svg" />
-    <link rel="stylesheet" href="styles.css" />
+      content="SnapTrove is where stories live, grow, and can always be returned to."
+    >
+    <link rel="icon" href="assets/brand/icon.png">
+    <link rel="stylesheet" href="styles.css?v=9">
   </head>
-  <body class="premium-site">
-    <header class="glass-nav" data-nav>
-      <a class="nav-brand" href="index.html" aria-label="SnapTrove home">
-        <img src="snaptrove-logo.svg" alt="" />
-        <span>SnapTrove</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <div class="nav-dropdown">
-          <button type="button">Features</button>
-          <div class="dropdown-panel">
-            <a href="features.html"><strong>Overview</strong><span>Social Troves, AI magic and live event tools.</span></a>
-            <a href="feature-private-feed.html"><strong>Private Feed</strong><span>Likes, comments, stories and reactions.</span></a>
-            <a href="feature-ai-magic.html"><strong>AI Magic</strong><span>Find every photo of me, reels and albums.</span></a>
-            <a href="feature-live-events.html"><strong>Live Events</strong><span>QR uploads, slideshows and chat.</span></a>
-          </div>
+  <body class="home-page">
+    <main id="top" class="welcome-shell">
+      <section class="welcome-panel" aria-labelledby="hero-title">
+        <div class="welcome-photo-stack" aria-hidden="true">
+          <img class="welcome-photo active" src="assets/photos/hero-dinner-table.jpeg" alt="" fetchpriority="high" decoding="async">
+          <img class="welcome-photo" src="assets/photos/trove-counter.jpeg" alt="" decoding="async">
+          <img class="welcome-photo" src="assets/photos/return-moving-box.jpeg" alt="" decoding="async">
+          <img class="welcome-photo" src="assets/photos/ask-evening-table.jpeg" alt="" decoding="async">
+          <img class="welcome-photo" src="assets/photos/early-access-hallway.jpeg" alt="" decoding="async">
         </div>
-        <div class="nav-dropdown">
-          <button type="button">Solutions</button>
-          <div class="dropdown-panel grid-panel">
-            <a href="solutions.html#weddings">Weddings</a>
-            <a href="solutions.html#birthdays">Birthdays</a>
-            <a href="solutions.html#families">Families</a>
-            <a href="solutions.html#schools">Schools</a>
-            <a href="solutions.html#camps">Camps</a>
-            <a href="solutions.html#businesses">Businesses</a>
-            <a href="solutions.html#sports-clubs">Sports Clubs</a>
-            <a href="solutions.html#holidays">Holidays</a><a href="solutions.html#celebrations">Milestones</a>
-            
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button type="button">Products</button>
-          <div class="dropdown-panel grid-panel">
-            <a href="products.html#greeting-cards">Greeting Cards</a>
-            <a href="products.html#thank-you-cards">Thank You Cards</a>
-            <a href="products.html#photo-books">Photo Books</a>
-            <a href="products.html#prints">Prints</a>
-            <a href="products.html#canvas">Canvas</a>
-            <a href="products.html#calendars">Calendars</a>
-            <a href="products.html#memory-boxes">Memory Boxes</a>
-            <a href="products.html#storybooks">AI Reels</a>
-            <a href="products.html#keepsakes">Keepsakes</a>
-          </div>
-        </div>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Memory Journal</a>
-        <a href="support.html">Support</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="nav-link" href="contact.html">Contact</a>
-        <a class="nav-cta-solid" href="app.html">Download App</a>
-        <button class="mobile-menu-button" type="button" data-menu-open aria-label="Open menu">
-          <span></span><span></span>
-        </button>
-      </div>
-    </header>
+        <div class="welcome-glow" aria-hidden="true"></div>
 
-    <aside class="mobile-drawer" data-menu aria-hidden="true">
-      <button class="mobile-close" type="button" data-menu-close aria-label="Close menu">Close</button>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="products.html">Products</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Memory Journal</a>
-      <a href="support.html">Support</a>
-      <a href="contact.html">Contact</a>
-      <a class="drawer-cta" href="app.html">Download App</a>
-    </aside>
-    <div class="drawer-scrim" data-menu-close></div>
+        <header class="site-header welcome-nav" aria-label="Primary navigation">
+          <a class="brand compact-brand" href="/" aria-label="SnapTrove home">
+            <img src="assets/brand/icon-transparent.png" alt="" aria-hidden="true" decoding="async">
+            <span>SnapTrove</span>
+          </a>
 
-    <main class="apple-home">
-      <section class="apple-hero story-panel">
-        <div class="apple-glow" aria-hidden="true"></div>
-        <div class="site-container apple-center reveal">
-          <p class="eyebrow">SnapTrove</p>
-          <h1>Every photo. Every guest. One beautiful story.</h1>
-          <p>SnapTrove is the private app where everyone shares the moments they captured, AI organises the story, and your favourite memories become keepsakes you can hold.</p>
-          <div class="button-row apple-actions">
-            <a class="button-primary" href="app.html">Get the App</a>
-            <a class="button-secondary" href="app.html">Preview Guest Access</a>
-          </div>
-        </div>
-        <div class="site-container hero-device-wrap reveal">
-          <div class="hero-photo-canvas">
-            <div class="memory-photo photo-one"></div>
-            <div class="memory-photo photo-two"></div>
-            <div class="memory-photo photo-three"></div>
-            <div class="floating-phone minimal-phone product-screen feed-screen">
-              <div class="phone-top"><strong>Wedding Trove</strong><em>Live</em></div>
-              <div class="story-bubbles"><span>+</span><span>M</span><span>N</span><span>AI</span></div>
-              <div class="phone-feed-image"></div>
-              <div class="social-row"><span>❤️ 184</span><span>💬 32</span><span>😍 🔥 👏</span></div>
-              <div class="comment-preview"><strong>Maya</strong><p>This has to go in the book.</p></div>
-              <div class="ai-pill">AI found 483 photos of you</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-panel problem-panel">
-        <div class="site-container apple-split">
-          <div class="apple-copy reveal">
-            <p class="eyebrow">The problem</p>
-            <h2>Your memories are scattered.</h2>
-            <p>Everyone takes photos. Nobody has them all.</p>
-          </div>
-          <div class="memory-flow reveal" aria-label="Scattered memories flow">
-            <span>Phone</span>
-            <span>WhatsApp</span>
-            <span>Instagram</span>
-            <span>Camera Roll</span>
-            <span>Google Photos</span>
-            <span>Friend's Phone</span>
-            <strong>Lost Forever</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-panel solution-panel">
-        <div class="site-container apple-center reveal">
-          <p class="eyebrow">The solution</p>
-          <h2>One place. Everyone together.</h2>
-          <p>Guests join in seconds. Photos stay together forever.</p>
-        </div>
-        <div class="site-container screenshot-stage reveal">
-          <div class="product-screen-grid">
-            <div class="app-screen create-screen">
-              <p class="screen-label">Create Trove</p>
-              <h3>Emily’s 10th Birthday</h3>
-              <div class="screen-field"><span>Date</span><strong>Saturday, 18 July</strong></div>
-              <div class="screen-field"><span>Privacy</span><strong>Invite only</strong></div>
-              <button type="button">Create private Trove</button>
-            </div>
-            <div class="app-screen qr-screen">
-              <p class="screen-label">QR Invite</p>
-              <div class="qr-block"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <h3>Scan to join</h3>
-              <p>Guests upload from any phone. No friction.</p>
-            </div>
-            <div class="wide-app-shot gallery-screen">
-              <div class="app-sidebar">
-                <strong>Birthday Trove</strong>
-                <span>92 guests</span>
-                <span>1,284 memories</span>
-                <span>Private by default</span>
-              </div>
-              <div class="app-main-shot">
-                <div class="shot-toolbar"><span>Feed</span><span>AI Albums</span><span>Keepsakes</span></div>
-                <div class="shot-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <nav class="nav-links" aria-label="Main">
+            <a href="/">Home</a>
+            <a href="/how-it-works">How It Works</a>
+            <a href="/troves">Troves</a>
+            <a href="/ask-snaptrove">Ask SnapTrove</a>
+            <a href="/organisations">Organisations</a>
+            <a href="/trust">Trust</a>
+            <div class="more">
+              <button class="more-button" type="button" aria-expanded="false" aria-controls="company-menu">
+                Company
+                <span aria-hidden="true">▾</span>
+              </button>
+              <div class="more-menu" id="company-menu">
+                <a href="/about">About SnapTrove</a>
+                <a href="/contact">Contact</a>
+                <a href="/support">Support</a>
+                <a href="/faq">FAQ</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </nav>
 
-      <section class="story-panel social-panel">
-        <div class="site-container apple-split reverse">
-          <div class="social-phone product-screen reveal">
-            <div class="phone-top"><strong>Private Feed</strong><em>Family only</em></div>
-            <div class="phone-feed-image"></div>
-            <div class="reaction-strip"><span>❤</span><span>😂</span><span>😍</span><span>🔥</span><span>👏</span></div>
-            <p><strong>Maya</strong> This one has to go in the book.</p>
-            <div class="comment-thread"><span>Nana replied</span><strong>Please send me this one.</strong></div>
-          </div>
-          <div class="apple-copy reveal">
-            <p class="eyebrow">Social</p>
-            <h2>Follow memories, not strangers.</h2>
-            <p>Likes, comments, Stories and reactions live inside each private Trove, with only the people you invited.</p>
-          </div>
-        </div>
-      </section>
+          <a class="nav-cta" href="mailto:info@getsnaptrove.com?subject=Join%20Early%20Access">Join Early Access</a>
+          <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+          </button>
+        </header>
 
-      <section class="story-panel ai-panel">
-        <div class="site-container apple-center reveal">
-          <p class="eyebrow">AI magic</p>
-          <h2>Meet your personal memory assistant.</h2>
-          <p>It finds, cleans, creates and remembers with you.</p>
-        </div>
-        <div class="site-container ai-showcase product-screen-grid reveal">
-          <div class="app-screen ai-dashboard">
-            <p class="screen-label">AI Magic Dashboard</p>
-            <h3>We organised 1,284 memories.</h3>
-            <div class="ai-meter"><span style="width: 92%"></span></div>
-            <ul><li>137 photos of Isaac</li><li>42 duplicate sets removed</li><li>18 best moments selected</li></ul>
-          </div>
-          <div class="app-screen face-search-screen">
-            <p class="screen-label">Find every photo of me</p>
-            <div class="search-pill">Search: Grandma</div>
-            <h3>83 photos found</h3>
-            <div class="mini-photo-row"><i></i><i></i><i></i></div>
-          </div>
-          <div class="app-screen reel-screen">
-            <p class="screen-label">AI Reel Creator</p>
-            <h3>Best of the day</h3>
-            <div class="reel-frame">Made with SnapTrove</div>
-            <button type="button">Create reel</button>
+        <div class="welcome-content reveal">
+          <img class="hero-icon" src="assets/brand/icon-transparent.png" alt="" aria-hidden="true" decoding="async">
+          <p class="hero-wordmark" aria-label="SnapTrove"><span>Snap</span><span>Trove</span></p>
+          <h1 id="hero-title">Every Moment.<br>One Story.</h1>
+          <p class="hero-promise">
+            Every Moment Matters.<br>
+            Every Person Counts.
+          </p>
+          <div class="hero-actions" aria-label="Home actions">
+            <a class="button primary hero-button" href="mailto:info@getsnaptrove.com?subject=Join%20Early%20Access">Join Early Access</a>
+            <a class="button secondary hero-button" href="/how-it-works">See How It Works</a>
           </div>
         </div>
-      </section>
 
-      <section class="story-panel product-panel">
-        <div class="site-container apple-center reveal">
-            <p class="eyebrow">Keepsakes</p>
-            <h2>Because some memories deserve more than a screen.</h2>
-            <p>Books, cards and prints made from the moments everyone shared.</p>
-        </div>
-        <div class="site-container keepsake-showcase reveal">
-          <div class="book-mock product-photo-card"><span>Photo Book</span><small>AI designed. You approve.</small></div>
-          <div class="card-mock product-photo-card"><span>Thank-you Card</span><small>Digital, WhatsApp or printed.</small></div>
-          <div class="print-mock product-photo-card"><span>Framed Print</span><small>Ready to hang.</small></div>
-          <div class="calendar-mock product-photo-card"><span>Calendar</span><small>Twelve months of moments.</small></div>
-          <div class="app-screen creator-screen">
-            <p class="screen-label">Greeting Card Creator</p>
-            <h3>Say it with a memory.</h3>
-            <div class="creator-preview">Happy Birthday</div>
-            <div class="creator-steps"><span>Choose</span><span>Personalise</span><span>Deliver</span></div>
-          </div>
-          <div class="app-screen checkout-screen">
-            <p class="screen-label">Checkout</p>
-            <h3>Memory Box</h3>
-            <p>Book, cards, prints, QR story and luxury packaging.</p>
-            <button type="button">Order keepsake</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-panel vault-panel">
-        <div class="site-container apple-split">
-          <div class="apple-copy reveal">
-            <p class="eyebrow">Trust</p>
-            <h2>Your memories belong to you.</h2>
-            <p>Private by default. No advertising. No selling your data. Just shared memories, protected for the people who made them.</p>
-          </div>
-          <div class="app-screen timeline-screen reveal">
-            <p class="screen-label">Family Timeline</p>
-            <h3>A lifetime of memories.</h3>
-            <div class="timeline-list"><span>Summer holiday</span><span>First day of school</span><span>Nana’s birthday</span><span>Wedding weekend</span></div>
-          </div>
-        </div>
-        <div class="site-container vault-pills reveal">
-          <span>Private by default</span>
-          <span>Encrypted</span>
-          <span>GDPR-ready</span>
-          <span>You own your memories</span>
-          <span>No advertising</span>
-          <span>No selling your data</span>
-        </div>
-      </section>
-
-      <section class="story-panel pricing-story">
-        <div class="site-container apple-center reveal">
-          <p class="eyebrow">Pricing</p>
-          <h2>Everyone shares. You decide what comes next.</h2>
-          <p>Guest access stays free. Upgrade when you’re ready for bigger events, AI magic and keepsakes.</p>
-          <a class="button-secondary" href="pricing.html">View Pricing</a>
-        </div>
-      </section>
-
-      <section class="story-panel final-story">
-        <div class="site-container apple-center reveal">
-          <p class="eyebrow">Download the app</p>
-          <h2>Don’t let another memory get lost.</h2>
-          <p>SnapTrove lives in the app. Create Troves, invite guests, upload memories and relive everything from your phone.</p>
-          <a class="button-primary" href="app.html">Download SnapTrove</a>
+        <div class="promise-strip reveal" aria-label="SnapTrove promises">
+          <article>
+            <h2>Private by default</h2>
+          </article>
+          <article>
+            <h2>Built around people</h2>
+          </article>
+          <article>
+            <h2>Stories that grow</h2>
+          </article>
+          <article>
+            <h2>Made to last</h2>
+          </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="site-container footer-grid footer-grid--premium">
-      <div class="footer-brand-block"><a class="nav-brand" href="index.html"><img src="snaptrove-logo.svg" alt="" /><span>SnapTrove</span></a><p>The private social platform for life’s memories.</p></div>
-      <div><strong>Download</strong><a href="app.html">Get the App</a><a href="app.html">Preview the App</a><a href="pricing.html">Start Free</a></div>
-      <div><strong>Product</strong><a href="features.html">Features</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a></div>
-      <div><strong>Company</strong><a href="about.html">About</a><a href="blog.html">Memory Journal</a><a href="contact.html">Contact</a></div>
-      <div><strong>Trust & Support</strong><a href="trust.html">Trust & Privacy</a><a href="support.html">Support</a><a href="mailto:hello@getsnaptrove.com">hello@getsnaptrove.com</a></div>
-      <div><strong>Social</strong><a href="https://instagram.com/getsnaptrove">Instagram</a><a href="https://www.linkedin.com/company/snaptrove">LinkedIn</a><a href="blog.html">Stories</a></div>
-    </div></footer>
-    <script src="site.js"></script>
+    <footer class="home-footer">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/contact">Contact</a>
+      <a href="mailto:info@getsnaptrove.com">info@getsnaptrove.com</a>
+      <p>© SnapTrove</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
