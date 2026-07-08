@@ -71,6 +71,7 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
 const realisationItems = [...document.querySelectorAll("[data-step]")];
+const realisationStack = document.querySelector(".realisation-stack");
 const finalPromise = document.querySelector(".final-promise");
 const homeHeroButton = document.querySelector(".hero-button");
 
@@ -78,6 +79,17 @@ function showRealisation(step) {
   realisationItems.forEach((item) => {
     item.classList.toggle("active", item.dataset.step === String(step));
   });
+
+  if (realisationStack && step !== 3) {
+    realisationStack.classList.remove("show-1", "show-2", "show-3", "show-4");
+  }
+}
+
+function showStackCount(count) {
+  if (!realisationStack) return;
+  showRealisation(3);
+  realisationStack.classList.remove("show-1", "show-2", "show-3", "show-4");
+  realisationStack.classList.add(`show-${count}`);
 }
 
 if (realisationItems.length) {
@@ -88,23 +100,32 @@ if (realisationItems.length) {
   } else {
     const sequence = [
       { step: 0, at: 0 },
-      { step: 1, at: 3600 },
-      { step: 2, at: 7200 },
-      { step: 3, at: 10800 },
-      { step: 4, at: 14600 },
+      { step: 1, at: 5250 },
+      { step: 2, at: 10500 },
+      { stack: 1, at: 15750 },
+      { stack: 2, at: 19250 },
+      { stack: 3, at: 22750 },
+      { stack: 4, at: 26250 },
+      { step: 4, at: 31500 },
     ];
 
-    sequence.forEach(({ step, at }) => {
-      window.setTimeout(() => showRealisation(step), at);
+    sequence.forEach(({ step, stack, at }) => {
+      window.setTimeout(() => {
+        if (stack) {
+          showStackCount(stack);
+        } else {
+          showRealisation(step);
+        }
+      }, at);
     });
 
     window.setTimeout(() => {
       finalPromise?.classList.add("active");
-    }, 15600);
+    }, 36800);
 
     window.setTimeout(() => {
       homeHeroButton?.classList.add("active");
-    }, 16600);
+    }, 38100);
   }
 }
 
