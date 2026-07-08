@@ -70,14 +70,42 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-const welcomePhotos = [...document.querySelectorAll(".welcome-photo-stack .welcome-photo")];
-if (welcomePhotos.length > 1 && !reduceMotion.matches) {
-  let activePhoto = 0;
-  window.setInterval(() => {
-    welcomePhotos[activePhoto].classList.remove("active");
-    activePhoto = (activePhoto + 1) % welcomePhotos.length;
-    welcomePhotos[activePhoto].classList.add("active");
-  }, 7000);
+const realisationItems = [...document.querySelectorAll("[data-step]")];
+const finalPromise = document.querySelector(".final-promise");
+const homeHeroButton = document.querySelector(".hero-button");
+
+function showRealisation(step) {
+  realisationItems.forEach((item) => {
+    item.classList.toggle("active", item.dataset.step === String(step));
+  });
+}
+
+if (realisationItems.length) {
+  if (reduceMotion.matches) {
+    showRealisation(4);
+    finalPromise?.classList.add("active");
+    homeHeroButton?.classList.add("active");
+  } else {
+    const sequence = [
+      { step: 0, at: 0 },
+      { step: 1, at: 3600 },
+      { step: 2, at: 7200 },
+      { step: 3, at: 10800 },
+      { step: 4, at: 14600 },
+    ];
+
+    sequence.forEach(({ step, at }) => {
+      window.setTimeout(() => showRealisation(step), at);
+    });
+
+    window.setTimeout(() => {
+      finalPromise?.classList.add("active");
+    }, 15600);
+
+    window.setTimeout(() => {
+      homeHeroButton?.classList.add("active");
+    }, 16600);
+  }
 }
 
 const parallaxItems = [...document.querySelectorAll("[data-parallax]")];

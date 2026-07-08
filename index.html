@@ -14,15 +14,6 @@
   <body class="home-page">
     <main id="top" class="welcome-shell">
       <section class="welcome-panel" aria-labelledby="hero-title">
-        <div class="welcome-photo-stack" aria-hidden="true">
-          <img class="welcome-photo active" src="assets/photos/hero-dinner-table.jpeg" alt="" fetchpriority="high" decoding="async">
-          <img class="welcome-photo" src="assets/photos/trove-counter.jpeg" alt="" decoding="async">
-          <img class="welcome-photo" src="assets/photos/return-moving-box.jpeg" alt="" decoding="async">
-          <img class="welcome-photo" src="assets/photos/ask-evening-table.jpeg" alt="" decoding="async">
-          <img class="welcome-photo" src="assets/photos/early-access-hallway.jpeg" alt="" decoding="async">
-        </div>
-        <div class="welcome-glow" aria-hidden="true"></div>
-
         <header class="site-header welcome-nav" aria-label="Primary navigation">
           <a class="brand compact-brand" href="/" aria-label="SnapTrove home">
             <img src="assets/brand/icon-transparent.png" alt="" aria-hidden="true" decoding="async">
@@ -48,11 +39,11 @@
                 <a href="/faq">FAQ</a>
                 <a href="/privacy">Privacy Policy</a>
                 <a href="/terms">Terms of Service</a>
+                <a href="mailto:info@getsnaptrove.com?subject=Join%20Early%20Access">Join Early Access</a>
               </div>
             </div>
           </nav>
 
-          <a class="nav-cta" href="mailto:info@getsnaptrove.com?subject=Join%20Early%20Access">Join Early Access</a>
           <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
             <span></span>
             <span></span>
@@ -62,30 +53,28 @@
         <div class="welcome-content reveal">
           <img class="hero-icon" src="assets/brand/icon-transparent.png" alt="" aria-hidden="true" decoding="async">
           <p class="hero-wordmark" aria-label="SnapTrove"><span>Snap</span><span>Trove</span></p>
-          <h1 id="hero-title">Every Moment.<br>One Story.</h1>
-          <p class="hero-promise">
-            Every Moment Matters.<br>
-            Every Person Counts.
-          </p>
-          <div class="hero-actions" aria-label="Home actions">
-            <a class="button primary hero-button" href="mailto:info@getsnaptrove.com?subject=Join%20Early%20Access">Join Early Access</a>
-            <a class="button secondary hero-button" href="/how-it-works">See How It Works</a>
-          </div>
-        </div>
+          <h1 id="hero-title">Every Moment. One Story.</h1>
 
-        <div class="promise-strip reveal" aria-label="SnapTrove promises">
-          <article>
-            <h2>Private by default</h2>
-          </article>
-          <article>
-            <h2>Built around people</h2>
-          </article>
-          <article>
-            <h2>Stories that grow</h2>
-          </article>
-          <article>
-            <h2>Made to last</h2>
-          </article>
+          <div class="realisation-stage" aria-live="polite">
+            <p class="realisation-line active" data-step="0">Life isn’t made of photographs.</p>
+            <p class="realisation-line" data-step="1">Life isn’t made of moments.</p>
+            <p class="realisation-line" data-step="2">Life is made of one story.</p>
+            <div class="realisation-stack" data-step="3">
+              <span>Every person.</span>
+              <span>Every perspective.</span>
+              <span>Every chapter.</span>
+              <span>Every moment.</span>
+            </div>
+            <p class="realisation-line final-line" data-step="4">
+              Together… they become the story of a life.
+            </p>
+          </div>
+
+          <div class="final-promise" aria-hidden="true">
+            <p>Every Moment Matters.<br>Every Person Counts.</p>
+          </div>
+
+          <a class="button primary hero-button" href="/how-it-works">How does it work?<span aria-hidden="true">→</span></a>
         </div>
       </section>
     </main>
